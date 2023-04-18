@@ -198,6 +198,7 @@ def build_model(hp):
                       hp.Choice("learning_rate", values=[1e-2, 1e-3, 1e-4])))
     
     return model
+
 # Configure Keras Tuner
 tuner = RandomSearch(build_model,
                      objective="val_loss",
